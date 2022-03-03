@@ -96,6 +96,11 @@ namespace RestSharp
                 return response.Data;
             }
 
+            if(typeof(ExceptionModel) == typeof(ApiErrorModel))
+            {
+                throw new ApiException(response);
+            }
+
             throw new RestException<ExceptionModel>(response);
         }
 
@@ -110,6 +115,11 @@ namespace RestSharp
                 return response.Data;
             }
 
+            if (typeof(ExceptionModel) == typeof(ApiErrorModel))
+            {
+                throw new ApiException(response);
+            }
+
             throw new RestException<ExceptionModel>(response);
         }
 
@@ -121,6 +131,11 @@ namespace RestSharp
             if (response.IsSuccessful)
             {
                 return response.Data;
+            }
+
+            if (typeof(ExceptionModel) == typeof(ApiErrorModel))
+            {
+                throw new ApiException(response);
             }
 
             throw new RestException<ExceptionModel>(response);
@@ -137,6 +152,11 @@ namespace RestSharp
             if (response.IsSuccessful)
             {
                 return response.Data;
+            }
+
+            if (typeof(ExceptionModel) == typeof(ApiErrorModel))
+            {
+                throw new ApiException(response);
             }
 
             throw new RestException<ExceptionModel>(response);
