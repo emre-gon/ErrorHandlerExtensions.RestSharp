@@ -12,6 +12,8 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageIcon>icon.png</PackageIcon>
     <Version>1.0.0</Version>
+    <Product>ErrorHandlerExtensions.RestSharp</Product>
+    <PackageId>ErrorHandlerExtensions.RestSharp</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
