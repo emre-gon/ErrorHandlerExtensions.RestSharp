@@ -1,6 +1,6 @@
-[![NuGet](https://img.shields.io/nuget/v/RestSharp.ErrorHandlerExtensions.svg)](https://www.nuget.org/packages/RestSharp.ErrorHandlerExtensions)
+[![NuGet](https://img.shields.io/nuget/v/ErrorHandlerExtensions.RestSharp.svg)](https://www.nuget.org/packages/ErrorHandlerExtensions.RestSharp)
 
-# RestSharp.ErrorHandlerExtensions
+# ErrorHandlerExtensions.RestSharp
 
 NHibernate AutoMapping configurations with custom attributes and json column support.
 
@@ -11,7 +11,7 @@ It uses NHibernate's AutoMapping conventions for reading custom attributes over 
 ## Installation
 
 ```
-dotnet add package Restsharp.ErrorHandlerExtensions
+dotnet add package ErrorHandlerExtensions.RestSharp
 ```
 
 ## Usage
