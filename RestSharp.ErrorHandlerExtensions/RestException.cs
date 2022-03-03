@@ -9,7 +9,7 @@ namespace RestSharp
     public class RestException : Exception
     {
         public RestException(RestResponse RestResponse)
-            :this(RestResponse, "Exception occured during REST call.")
+            :this(RestResponse, "Exception occured during REST call. See 'ErrorData' for potential reasons.")
         {
 
         }

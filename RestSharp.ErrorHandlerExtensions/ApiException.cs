@@ -10,7 +10,12 @@ namespace RestSharp
         public ApiException(RestResponse ResponseContent)
             : base(ResponseContent)
         {
-            
+
+        }
+        public ApiException(RestResponse ResponseContent, string Message)
+            : base(ResponseContent, Message)
+        {
+
         }
 
         public Dictionary<string, List<string>> Errors
