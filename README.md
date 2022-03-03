@@ -2,11 +2,7 @@
 
 # ErrorHandlerExtensions.RestSharp
 
-NHibernate AutoMapping configurations with custom attributes and json column support.
-
-It uses NHibernate's AutoMapping conventions for reading custom attributes over classes and properties and does database mapping, without the need of xml and and fluent mapping.
-
-
+RestSharp extension where Rest calls throws exception when HttpStatusCode is not Success(200*)
 
 ## Installation
 
