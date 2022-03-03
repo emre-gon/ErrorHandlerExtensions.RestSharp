@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.ErrorHandlerExtensions", "Restsharp.ErrorHandlerExtensions\RestSharp.ErrorHandlerExtensions.csproj", "{ECB98426-F7B4-49CD-A82D-6B8F34426D49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB98426-F7B4-49CD-A82D-6B8F34426D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB98426-F7B4-49CD-A82D-6B8F34426D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB98426-F7B4-49CD-A82D-6B8F34426D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB98426-F7B4-49CD-A82D-6B8F34426D49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81F6FB92-4E34-417A-9CA1-368ECA984354}
+	EndGlobalSection
+EndGlobal
