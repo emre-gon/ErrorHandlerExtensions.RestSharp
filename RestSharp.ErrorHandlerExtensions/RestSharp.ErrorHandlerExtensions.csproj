@@ -11,7 +11,7 @@
     <Description>Get/Post/Put/Delete extensions that Throws meaningful exception for unsuccessfult status codes.</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Product>ErrorHandlerExtensions.RestSharp</Product>
     <PackageId>ErrorHandlerExtensions.RestSharp</PackageId>
   </PropertyGroup>

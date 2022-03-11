@@ -9,7 +9,7 @@ namespace RestSharp
     public class RestException : Exception
     {
         public RestException(RestResponse RestResponse)
-            :this(RestResponse, "Exception occured during REST call. See 'ErrorData' for potential reasons.")
+            :this(RestResponse, "Exception occured during REST call. See 'RestResponse.Content' for potential reasons.")
         {
 
         }
@@ -33,7 +33,7 @@ namespace RestSharp
     public class RestException<ExceptionDataModel> : RestException
     {
         public RestException(RestResponse RestResponse)
-            : this(RestResponse, "Exception occured during REST call.")
+            : this(RestResponse, "Exception occured during REST call. See 'ErrorData' and 'RestResponse.Content' for potential reasons.")
         {
 
         }
@@ -46,7 +46,7 @@ namespace RestSharp
             try
             {
                 this.ErrorData = JsonConvert.DeserializeObject<ExceptionDataModel>(RestResponse.Content);
-                this.ErrorJsonParseResult = "Error JSON model is successfully parsed.";
+                this.ErrorJsonParseResult = "Error JSON model is parsed.";
             }
             catch(Exception ex)
             {

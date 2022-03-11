@@ -70,9 +70,9 @@ namespace RestSharp
         /// <param name="cancellationToken"></param>
         /// <exception cref="ApiException">This exception is thrown if Response Status Code is not Success</exception>
         /// <returns></returns>
-        public static async Task<T> DeleteApiAsync<T>(this RestClient client, RestRequest request, CancellationToken cancellationToken = default)
+        public static async Task DeleteApiAsync(this RestClient client, RestRequest request, CancellationToken cancellationToken = default)
         {
-            return await DeleteAsyncSafe<T, ApiErrorModel>(client, request, cancellationToken);
+            await DeleteAsyncSafe<ApiErrorModel>(client, request, cancellationToken);
         }
         #endregion
 
@@ -141,6 +141,28 @@ namespace RestSharp
             throw new RestException<ExceptionModel>(response);
         }
 
+        public static async Task DeleteAsyncSafe<ExceptionModel>(this RestClient client, RestRequest request, CancellationToken cancellationToken = default)
+        {
+            var response = await client.ExecuteAsync(request, Method.Delete, cancellationToken).ConfigureAwait(false);
+
+            var exception = GetException(response);
+            if (exception != null) throw exception;
+
+
+            if (response.IsSuccessful)
+            {
+                return;
+            }
+
+            if (typeof(ExceptionModel) == typeof(ApiErrorModel))
+            {
+                throw new ApiException(response);
+            }
+
+            throw new RestException<ExceptionModel>(response);
+        }
+
+
         public static async Task<T> DeleteAsyncSafe<T,ExceptionModel>(this RestClient client, RestRequest request, CancellationToken cancellationToken = default)
         {
             var response = await client.ExecuteAsync<T>(request, Method.Delete, cancellationToken).ConfigureAwait(false);
@@ -162,7 +184,7 @@ namespace RestSharp
             throw new RestException<ExceptionModel>(response);
         }
 
-        private static Exception GetException<ExceptionModel>(RestResponse<ExceptionModel> response)
+        private static Exception GetException(RestResponse response)
         {
             switch (response.ResponseStatus)
             {
@@ -174,7 +196,7 @@ namespace RestSharp
                 case ResponseStatus.Completed:
                     return null;
                 default:
-                    throw response.ErrorException ?? new ArgumentOutOfRangeException(nameof(ResponseStatus));
+                    return response.ErrorException ?? new ArgumentOutOfRangeException(nameof(ResponseStatus));
             }
         }
         #endregion
