@@ -40,13 +40,13 @@ namespace RestSharp
                 return ErrorData.Title;
             }
         }
-        public string Type
-        {
-            get
-            {
-                return ErrorData.Type;
-            }
-        }
+        //public string Type
+        //{
+        //    get
+        //    {
+        //        return ErrorData.Type;
+        //    }
+        //}
 
     }
 }

@@ -24,7 +24,7 @@ namespace RestSharp
 
         public string TraceId { get; set; }
         public string Title { get; set; }
-        public string Type { get; set; }
+        //public string Type { get; set; }
 
         public HttpStatusCode Status { get; set; }
     }
