@@ -50,7 +50,7 @@ namespace RestSharp
             }
             catch(Exception ex)
             {
-                this.ErrorJsonParseResult = "Error JSON could not be parsed into. " + typeof(ExceptionDataModel).FullName + ". See 'ErrorErrorJsonParseException' for details.";
+                this.ErrorJsonParseResult = "Error JSON could not be parsed into. " + typeof(ExceptionDataModel).FullName + ". See 'ErrorJsonParseException' for details.";
                 this.ErrorJsonParseException = ex;
             }
         }
