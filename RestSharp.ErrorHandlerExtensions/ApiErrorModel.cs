@@ -13,7 +13,7 @@ namespace RestSharp
 
         public ApiErrorModel(HttpStatusCode Status, string Message)
         {
-            Title = Message;
+            ErrorMessage = Message;
             this.Status = Status;
         }
 
@@ -22,8 +22,8 @@ namespace RestSharp
 
         public Dictionary<string, List<string>> Errors { get; set; }
 
-        public string TraceId { get; set; }
-        public string Title { get; set; }
+        public string RequestID { get; set; }
+        public string ErrorMessage { get; set; }
         //public string Type { get; set; }
 
         public HttpStatusCode Status { get; set; }

@@ -21,23 +21,23 @@ namespace RestSharp
         public Dictionary<string, List<string>> Errors
         {
             get
-            {
+            {                
                 return ErrorData.Errors;
             }
         }
 
-        public string TraceId
+        public string RequestID
         {
             get
             {
-                return ErrorData.TraceId;
+                return ErrorData.RequestID;
             }
         }
-        public string Title
+        public string ErrorMessage
         {
             get
             {
-                return ErrorData.Title;
+                return ErrorData.ErrorMessage;
             }
         }
         //public string Type
